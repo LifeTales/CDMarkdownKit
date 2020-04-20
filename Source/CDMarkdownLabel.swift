@@ -321,7 +321,10 @@ open class CDMarkdownLabel: UILabel {
             avoidSuperCall = true
         case .cancelled:
             self.selectedURLRange = nil
-        case .stationary:
+        case .stationary,
+             .regionEntered, // Newly added by Xcode update; not sure how to handle. - Graeme April 20, 2020
+             .regionMoved, // Newly added by Xcode update; not sure how to handle. - Graeme April 20, 2020
+             .regionExited: // Newly added by Xcode update; not sure how to handle. - Graeme April 20, 2020
             break
         }
 
